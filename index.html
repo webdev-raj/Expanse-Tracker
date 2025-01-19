@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Expense Tracker</title>
+</head>
+
+<body>
+    <div id="main" class="w-full min-h-screen bg-zinc-900 flex items-center justify-center">
+        <div class="text-white font-[font1] flex justify-center flex-col h-[80vh] w-[60vw] font-semibold tracking-tight max-sm:h-[90vh] max-sm:w-[90vw]">
+            <h1 class="text-5xl max-sm:text-[2.7rem]">Expense Tracker.</h1>
+            <div class="border px-8 py-5 rounded-md mt-5 max-sm:px-6">
+                <form action="#" class="">
+                    <h1 class="text-3xl">Add Expense</h1>
+                    <div id="containerDes" class="flex flex-col items-start justify-start mt-2">
+                        <label for="des" class="text-xl text-zinc-400">description :</label>
+                        <input id="description" type="text" name="des" value="" placeholder="Enter expense description"
+                            class="px-4 max-sm:px-2 py-2 bg-transparent outline-none border border-zinc-400 w-full rounded-lg mt-2 tracking-normal">
+                    </div>
+                    <div id="containerAmt" class="flex flex-col items-start justify-start mt-2">
+                        <label for="amount" class="text-xl text-zinc-400">amount :</label>
+                        <input id="number" value="" type="number" name="amount" placeholder="Enter expense amount"
+                            class="px-4 max-sm:px-2 py-2 bg-transparent outline-none border border-zinc-400 w-full rounded-lg mt-2 tracking-normal">
+                    </div>
+                    <div id="containerCtgry" class="flex flex-col items-start justify-start mt-2">
+                        <label for="category" class="text-xl text-zinc-400">category :</label>
+                        <select name="category" id="cate"
+                            class="px-4 max-sm:px-2 py-2 w-full bg-transparent border border-zinc-400 rounded-lg mt-2 tracking-normal">
+                            <option value="food" class="text-black">Select Category</option>
+                            <option value="food" class="text-black">Food</option>
+                            <option value="travel" class="text-black">Travel</option>
+                            <option value="entertainment" class="text-black">Entertainment</option>
+                            <option value="gaming" class="text-black">Gaming</option>
+                            <option value="other" class="text-black">Other</option>
+                        </select>
+                    </div>
+                    <div id="containerDte" class="flex flex-col items-start justify-start mt-2">
+                        <label for="date" class="text-xl text-zinc-400">date :</label>
+                        <input type="date" name="date" id="dte"
+                            class="makeRemove px-4 max-sm:px-2 py-2 bg-transparent outline-none border border-zinc-400 w-full rounded-lg mt-2 tracking-normal text-white">
+                    </div>
+                    <br>
+                    <hr>
+                    <button id="subBtn" type="submit" class="w-full py-3 text-white bg-emerald-600 rounded-lg tracking-normal mt-5">Add
+                        Expense</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

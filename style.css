@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face{
+    font-family: font1;
+    src:url("./fonts/Gilroy-Regular.ttf")
+}
+
+.makeRemove{
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+}
+/*  */
+
+.makeRemove:before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="white" viewBox="0 0 24 24"><path d="M19 4h-1V2h-2v2H8V2H6v2H5c-1.1 0-1.99.9-1.99 2L3 20c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V10h14v10zM7 12h5v5H7z"/></svg>');
+    position: absolute;
+    right: 14px;
+    top: 65%;
+    transform: translateY(-60%);
+    pointer-events: none;
+    cursor: pointer;
+}
