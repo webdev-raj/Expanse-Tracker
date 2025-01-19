@@ -37,3 +37,4 @@ const totolPrice = () => {
     currentIndex++;
     console.log(totalPrice);
 }
+

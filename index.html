@@ -9,8 +9,9 @@
 </head>
 
 <body>
-    <div id="main" class="w-full min-h-screen bg-zinc-900 flex items-center justify-center">
-        <div class="text-white font-[font1] flex justify-center flex-col h-[80vh] w-[60vw] font-semibold tracking-tight max-sm:h-[90vh] max-sm:w-[90vw]">
+    <div id="main" class="w-full min-h-screen bg-zinc-900 flex items-center justify-center py-20">
+        <div
+            class="text-white font-[font1] flex justify-center flex-col w-[60vw] font-semibold tracking-tight max-sm:h-[90vh] max-sm:w-[90vw]">
             <h1 class="text-5xl max-sm:text-[2.7rem]">Expense Tracker.</h1>
             <div class="border px-8 py-5 rounded-md mt-5 max-sm:px-6">
                 <form action="#" class="">
@@ -44,13 +45,48 @@
                     </div>
                     <br>
                     <hr>
-                    <button id="subBtn" type="submit" class="w-full py-3 text-white bg-emerald-600 rounded-lg tracking-normal mt-5">Add
+                    <button id="subBtn" type="submit"
+                        class="w-full py-3 text-white bg-emerald-600 rounded-lg tracking-normal mt-5">Add
                         Expense</button>
                 </form>
+                <!-- <div>
+                    <p class="text-xl text-white mt-12">Total Expenses: <span id="totalExp">0</span></p>
+                    <button id="clearBtn" class="w-full py-3 text-white bg-red-600 rounded-lg tracking-normal mt-5">Clear All
+                        Expenses</button>
+                </div> -->
+                <div class="w-full mt-20">
+                    <table class="w-full">
+                        <h1 class="text-3xl my-3">Expenses List</h1>
+                        <thead>
+                            <tr class="border">
+                                <th class="text-2xl text-left">Date</th>
+                                <th class="text-2xl text-left">Description</th>
+                                <th class="text-2xl text-left">Category</th>
+                                <th class="text-2xl text-left">Amount</th>
+                                <th class="text-2xl text-left">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            <tr>
+                                <td>2022-01-01</td>
+                                <td>test</td>
+                                <td>Food</td>
+                                <td>100</td>
+                                <td>Delete</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="4" class="text-right ">Total Expenses:</td>
+                                <td id="total" class=""></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
 </body>
 
 </html>
