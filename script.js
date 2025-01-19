@@ -1,7 +1,9 @@
 window.addEventListener("DOMContentLoaded", function () {
     getFormValue()
 })
-let mainArray = new Array();
+var mainArray = new Array();
+var totalPrice = 0;
+var currentIndex = 0
 const getFormValue = () => {
     let description = document.querySelector("#description")
     let amount = document.querySelector("#number")
@@ -15,26 +17,23 @@ const getFormValue = () => {
     amount.addEventListener("change", (e) => {
         amount = Number(e.target.value)
     })
-    // subBtn.addEventListener("click", (e) => {
-    //     // selected = selected.options[selected.selectedIndex].text
-    //     // formElem.addEventListener("submit", (e) => {
-    //     //     let storeVal = new Array
-    //     //     storeVal.push(description)
-    //     //     storeVal.push(number)
-    //     //     storeVal.push(dateVal)
-    //     //     storeVal.push(selected)
-    //     //     e.preventDefault()
-    //     // })
-    // })
     subBtn.addEventListener("click", (e) => {
         e.preventDefault()
-        dateVal = dateVal.value
-        selected = selected.options[selected.selectedIndex].text
+        dynamicObject();
+        console.log(mainArray)
+        formElem.reset()
+    })
+    const dynamicObject = () => {
         mainArray.push(new Object)
         mainArray[mainArray.length - 1].description = description
         mainArray[mainArray.length - 1].amount = amount
-        mainArray[mainArray.length - 1].select = selected
-        mainArray[mainArray.length - 1].date = dateVal
-        console.log(mainArray)
-    })
+        mainArray[mainArray.length - 1].select = selected.options[selected.selectedIndex].textContent
+        mainArray[mainArray.length - 1].date = dateVal.value
+        totolPrice()
+    }
+}
+const totolPrice = () => {
+    totalPrice = totalPrice + mainArray[currentIndex].amount;
+    currentIndex++;
+    console.log(totalPrice);
 }
