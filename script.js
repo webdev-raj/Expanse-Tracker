@@ -52,9 +52,12 @@ const displayALL = () => {
   }
   table.innerHTML = clutter;
 };
-// const deleteMethod = ()=>{
-//   let deleteBtn = document.querySelector(".deleteBtn")
-//   deleteBtn.addEventListener("click",()=>{
-//     alert("Delete")
-//   })
-// }
+
+const deleteMethod = ()=>{
+  let deleteBtn = document.querySelectorAll(".deleteBtn")
+  deleteBtn.forEach((btn)=>{
+    btn.addEventListener("click",()=>{
+      alert("Delete");
+    })
+  })
+}
