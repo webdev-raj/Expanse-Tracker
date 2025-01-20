@@ -2,8 +2,7 @@ window.addEventListener("DOMContentLoaded", function () {
   getFormValue();
 });
 var mainArray = [];
-var totalPrice = 0;
-
+var totalPrice = 0
 const getFormValue = () => {
   let description = document.querySelector("#description");
   let amount = document.querySelector("#number");
@@ -37,6 +36,7 @@ const getFormValue = () => {
 };
 
 const displayALL = () => {
+  let totalPriceElement = document.querySelector("#totalPriceElement");
   let clutter = "";
   let table = document.querySelector("#tableBody");
   for (let i = 0; i < mainArray.length; i++) {
@@ -46,17 +46,25 @@ const displayALL = () => {
                                 <td class="border px-4 py-2 text-xl text-zinc-400">${mainArray[i].select_reason}</td>
                                 <td class="border px-4 py-2 text-xl text-zinc-400">${mainArray[i].expense_amount}</td>
                                 <td class="border py-2 text-center">
-                                    <button class="deleteBtn bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700">Delete</button>
+                                    <button id="btn" class="deleteBtn bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-700">Delete</button>
                                 </td>
                             </tr>`;
+    totalPriceFunction()
   }
   table.innerHTML = clutter;
+  totalPriceElement.innerHTML = `₹${totalPrice}/-`;
 };
 
-const deleteMethod = ()=>{
+const totalPriceFunction = ()=>{
+  totalPrice=mainArray.reduce((previous,next)=>{
+    return previous + next.expense_amount;
+  },0)
+}
+
+const deleteMethod = () => {
   let deleteBtn = document.querySelectorAll(".deleteBtn")
-  deleteBtn.forEach((btn)=>{
-    btn.addEventListener("click",()=>{
+  deleteBtn.forEach((btn) => {
+    btn.addEventListener("click", () => {
       alert("Delete");
     })
   })

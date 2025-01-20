@@ -22,3 +22,10 @@
     pointer-events: none;
     cursor: pointer;
 }
+
+#btn{
+    background-color: red;
+}
+#btn:hover{
+    background-color: rgb(221, 1, 1);
+}
