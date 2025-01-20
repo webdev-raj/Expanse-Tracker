@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+  <script type="module" crossorigin src="/assets/index-wA44YIBj.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DkfzHrj6.css">
+</head>
+
+<body>
+    <div id="main" class="w-full min-h-screen bg-zinc-900 flex items-center justify-center py-20">
+        <div
+            class="text-white font-[font1] flex justify-center flex-col w-[60vw] font-semibold tracking-tight max-sm:h-[90vh] max-sm:w-[90vw]">
+            <h1 class="text-5xl max-sm:text-[2.7rem]">Expense Tracker.</h1>
+            <div class="border px-8 py-5 rounded-md mt-5 max-sm:px-6">
+                <form action="#" class="">
+                    <h1 class="text-3xl">Add Expense</h1>
+                    <div id="containerDes" class="flex flex-col items-start justify-start mt-2">
+                        <label for="des" class="text-xl text-zinc-400">description :</label>
+                        <input id="description" type="text" name="des" value="" placeholder="Enter expense description"
+                            class="px-4 max-sm:px-2 py-2 bg-transparent outline-none border border-zinc-400 w-full rounded-lg mt-2 tracking-normal">
+                    </div>
+                    <div id="containerAmt" class="flex flex-col items-start justify-start mt-2">
+                        <label for="amount" class="text-xl text-zinc-400">amount :</label>
+                        <input id="number" value="" type="number" name="amount" placeholder="Enter expense amount"
+                            class="px-4 max-sm:px-2 py-2 bg-transparent outline-none border border-zinc-400 w-full rounded-lg mt-2 tracking-normal">
+                    </div>
+                    <div id="containerCtgry" class="flex flex-col items-start justify-start mt-2">
+                        <label for="category" class="text-xl text-zinc-400">category :</label>
+                        <select name="category" id="cate"
+                            class="px-4 max-sm:px-2 py-2 w-full bg-transparent border border-zinc-400 rounded-lg mt-2 tracking-normal">
+                            <option value="defualt" class="text-black">Select Category</option>
+                            <option value="food" class="text-black">Food</option>
+                            <option value="travel" class="text-black">Travel</option>
+                            <option value="entertainment" class="text-black">Entertainment</option>
+                            <option value="gaming" class="text-black">Gaming</option>
+                            <option value="other" class="text-black">Other</option>
+                        </select>
+                    </div>
+                    <div id="containerDte" class="flex flex-col items-start justify-start mt-2">
+                        <label for="date" class="text-xl text-zinc-400">date :</label>
+                        <input type="date" name="date" id="dte"
+                            class="makeRemove px-4 max-sm:px-2 py-2 bg-transparent outline-none border border-zinc-400 w-full rounded-lg mt-2 tracking-normal text-white">
+                    </div>
+                    <br>
+                    <hr>
+                    <button id="subBtn" type="submit"
+                        class="w-full py-3 text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg tracking-normal mt-5">Add
+                        Expense</button>
+                </form>
+                <div class="w-full my-5">
+                    <h1 class="text-3xl my-3">Expenses List</h1>
+                    <table class="w-full border-collapse">
+                        <thead>
+                            <tr class="">
+                                <th class="border text-2xl px-4 py-1 text-left">Date</th>
+                                <th class="border text-2xl px-4 py-1 text-left">Description</th>
+                                <th class="border text-2xl px-4 py-1 text-left">Category</th>
+                                <th class="border text-2xl px-4 py-1 text-left">Amount</th>
+                                <th class="border text-2xl px-4 py-1 text-center">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            
+                        </tbody>
+                        <tfoot>
+                            <tr class="border">
+                                <td colspan="3" class="px-4 py-2 font-bold text-left text-xl">Total Expenses</td>
+                                <td id="totalPriceElement" colspan="2" class="px-4 py-2 font-bold text-xl">₹0.00</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
