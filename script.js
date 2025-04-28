@@ -46,7 +46,7 @@ const displayALL = () => {
                                 <td class="border px-4 py-2 text-xl text-zinc-400">${mainArray[i].select_reason}</td>
                                 <td class="border px-4 py-2 text-xl text-zinc-400">${mainArray[i].expense_amount}</td>
                                 <td class="border py-2 text-center">
-                                    <button id="btn" class="deleteBtn bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-700">Delete</button>
+                                    <button data-id="${i}" id="btn" class="deleteBtn bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-700">Delete</button>
                                 </td>
                             </tr>`;
     totalPriceFunction()
@@ -65,7 +65,9 @@ const deleteMethod = () => {
   let deleteBtn = document.querySelectorAll(".deleteBtn")
   deleteBtn.forEach((btn) => {
     btn.addEventListener("click", () => {
-      alert("Delete");
+      let delIndex=btn.getAttribute("data-id")
+      mainArray.splice(delIndex,1)
+      displayALL()
     })
   })
 }
