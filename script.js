@@ -22,7 +22,6 @@ const getFormValue = () => {
     e.preventDefault();
     dynamicObject(descriptionVal, amountVal, selected.options[selected.selectedIndex].textContent, dateVal.value);
     displayALL();
-    deleteMethod()
     formElem.reset();
   });
   const dynamicObject = (description, amount, category, date) => {
@@ -53,6 +52,7 @@ const displayALL = () => {
   }
   table.innerHTML = clutter;
   totalPriceElement.innerHTML = `₹${totalPrice}/-`;
+  deleteMethod()
 };
 
 const totalPriceFunction = ()=>{
@@ -71,3 +71,4 @@ const deleteMethod = () => {
     })
   })
 }
+
